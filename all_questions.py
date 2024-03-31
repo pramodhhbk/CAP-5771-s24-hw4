@@ -8,16 +8,16 @@ def question1():
     answers = {}
 
     # string "yes" or "no"
-    answers["(a)"] = None
-    answers["(b)"] = None
-    answers["(c)"] = None
-    answers["(d)"] = None
+    answers["(a)"] = "no"
+    answers["(b)"] = "no"
+    answers["(c)"] = "yes"
+    answers["(d)"] = "yes"
 
     # explain-string: explanation in english prose
-    answers["(a) explain"] = None
-    answers["(b) explain"] = None
-    answers["(c) explain"] = None
-    answers["(d) explain"] = None
+    answers["(a) explain"] = "A record satisfying both Home Owner is yes and Annual Income = Low is also yes, so two separate rules can be applicable for a single record. Thus not exclusive"
+    answers["(b) explain"] = "It is not exhaustive, since the given rules doesnt account for Marital Status = Divorced"
+    answers["(c) explain"] = "Since there are overlapping rules, ordering is necessary, also in general ordering the rules is a good practice. For example a record having both Home Owner = No and Marital Status = Single will satisfy two rules in the given rule set"
+    answers["(d) explain"] = "We need default class because, when a record containing Marital Status = Divorced and Home Owner = No, it doesnt satisfy any of the given rules."
 
     return answers
 
@@ -46,14 +46,14 @@ def question3():
     answers = {}
 
     # string "yes" or "no"
-    answers["(a)"] = None
-    answers["(b)"] = None
-    answers["(c)"] = None
+    answers["(a)"] = "yes"
+    answers["(b)"] = "no"
+    answers["(c)"] = "no"
 
     # explain-string: explanation in english prose
-    answers["(a) example"] = None
-    answers["(b) example"] = None
-    answers["(c) example"] = None
+    answers["(a) example"] = "Based on the given rules and dataset, no vertebrate would be eligible to be classified as more than one class. Thus the rules are mutually exclusive."
+    answers["(b) example"] = "Amphibians are not classified by any of these rules, thus these rules are not exhaustive"
+    answers["(c) example"] = "There are no overlaps thus ordering not necessary"
 
     return answers
 # -----------------------------------------------------------
@@ -61,16 +61,16 @@ def question7():
     answers = {}
 
     # bool: True/False
-    answers["(a)"] = None
-    answers["(b)"] = None
-    answers["(c)"] = None
-    answers["(d)"] = None
+    answers["(a)"] = True
+    answers["(b)"] = True
+    answers["(c)"] = False
+    answers["(d)"] = False
 
     # explain_string: explanation in english prose
-    answers["(a) explain"] = None
-    answers["(b) explain"] = None
-    answers["(c) explain"] = None
-    answers["(d) explain"] = None
+    answers["(a) explain"] = "Gradient of weights are calculated using chain-rule. Thus the (k+1)th gradient can be calculated using the kth weight's gradient in back propagation since it goes from op layer to ip layer"
+    answers["(b) explain"] = "The activation in the node of k+1 layer is weighted sum of the kth layer, thus can be used for the calculation."
+    answers["(c) explain"] = "The given fact is called overfitting and not vanishing gradient"
+    answers["(d) explain"] = "The gradient of loss would be 0 if the input is 0 or the loss is converged to global minimum"
 
     return answers
 
@@ -79,30 +79,30 @@ def question8():
     answers = {}
 
     # float
-    answers["(a) P(X_1=1)"] = None
-    answers["(a) P(X_2=1)"] = None
-    answers["(a) P(X_1=1,X_2=1)"] = None
+    answers["(a) P(X_1=1)"] = 0.65
+    answers["(a) P(X_2=1)"] = 0.41
+    answers["(a) P(X_1=1,X_2=1)"] = 0.28
 
     # string: "dependent" or "independent"
-    answers["(a) Relationship between X_1 and X_2"] = None
+    answers["(a) Relationship between X_1 and X_2"] = "dependent"
 
     # string: "yes" or "no"
-    answers["(b) X_1 and X_2 conditionally independent given the class?"] = None
+    answers["(b) X_1 and X_2 conditionally independent given the class?"] = "yes"
 
     # float
-    answers["(c) P(X_1=1 | +)"] = None
-    answers["(c) P(X_1=1 | -)"] = None
-    answers["(c) P(X_2=1 | +)"] = None
-    answers["(c) P(X_2=1 | -)"] = None
-    answers["(c) P(X_3=1 | +)"] = None
-    answers["(c) P(X_3=1 | -)"] = None
+    answers["(c) P(X_1=1 | +)"] = 0.8
+    answers["(c) P(X_1=1 | -)"] = 0.5
+    answers["(c) P(X_2=1 | +)"] = 0.5
+    answers["(c) P(X_2=1 | -)"] = 0.32
+    answers["(c) P(X_3=1 | +)"] = 0.4
+    answers["(c) P(X_3=1 | -)"] = 0.16
 
     # For each row give the class predicted by the model after training using Naive Bayes
     # String: either '+' or '-'
-    answers["(d) Row 1"] = None
-    answers["(d) Row 2"] = None
-    answers["(d) Row 3"] = None
-    answers["(d) Row 4"] = None
+    answers["(d) Row 1"] = '+'
+    answers["(d) Row 2"] = '-'
+    answers["(d) Row 3"] = '-'
+    answers["(d) Row 4"] = '-'
 
     # float between 0 and 1
     answers["(d) Training error rate"] = None
@@ -114,12 +114,12 @@ def question9():
     answers = {}
 
     # int
-    answers["(a) K"] = None
-    answers["(b) K"] = None
+    answers["(a) K"] = 5
+    answers["(b) K"] = 5
 
     # explain_string
-    answers["(a) explain"] = None
-    answers["(b) explain"] = None
+    answers["(a) explain"] = "Provides balance for k=5, since k=1 cosniders every point as one cluster and k=50 diluting the local structure of the data."
+    answers["(b) explain"] = "It considers a small enough number of neighbors to capture the local patterns in the data, but not so less that it becomes overly sensitive to noise."
 
     return answers
 
